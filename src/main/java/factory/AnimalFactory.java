@@ -29,7 +29,7 @@ public class AnimalFactory {
         Random random = new Random();
         Class<? extends Animal> animalClass = animalClasses.get(random.nextInt(animalClasses.size()));
         Animal animal = animalClass.newInstance();
-        Field[] fields = animalClass.getDeclaredFields();
+       /* Field[] fields = animalClass.getDeclaredFields();
         for (Field field : fields) {
 
             InjectRandomInt annotation = field.getAnnotation(InjectRandomInt.class);
@@ -41,7 +41,7 @@ public class AnimalFactory {
                 field.set(animal,randomIntValue);
 
             }
-        }
+        }*/
         return animal;
     }
 
